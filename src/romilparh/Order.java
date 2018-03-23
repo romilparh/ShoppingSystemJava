@@ -30,5 +30,4 @@ public class Order implements ShowDetails {
 			System.out.print("*");
 		}
 	}
-
 }

@@ -34,5 +34,9 @@ public class Administrator extends User implements ShowDetails {
 			System.out.print("*");
 		}
 	}
+	
+	public void updateVerificationGrid(int verificationGrid) {
+		this.verificationGrid = verificationGrid;
+	}
 
 }

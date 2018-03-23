@@ -44,6 +44,19 @@ public class Customer extends User implements ShowDetails{
 		}
 	}
 	
+	public void updateCardNumber(int cardNumber) {
+		this.cardNumber = cardNumber;
+	}
 	
+	public void updateCardExpiry(Date cardExpiry) {
+		this.cardExpiry = cardExpiry;
+	}
 	
+	public void updatecardType(char cardType) {
+		this.cardType = cardType;
+	}
+
+	public void updateCardCVV(int cardCVV) {
+		this.cardCVV = cardCVV;
+	}
 }

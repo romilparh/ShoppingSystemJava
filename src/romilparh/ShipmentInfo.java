@@ -20,4 +20,16 @@ public class ShipmentInfo extends Order implements ShowDetails{
 			System.out.print("*");
 		}
 	}
+	
+	public void updateShippingType(char shippingType) {
+		this.shippingType = shippingType;
+		}
+	
+	public void updateShippingCost(float shippingCost) {
+		this.shippingCost = shippingCost;
+	}
+	
+	public void updateShippingStatus(char shippingStatus) {
+		this.shippingStatus = shippingStatus;
+	}
 }

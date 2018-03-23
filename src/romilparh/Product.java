@@ -17,10 +17,6 @@ public class Product implements ShowDetails {
 	 */
 	
 	Product(){
-		this.productID = "";
-		this.productName = "";
-		this.productPrice = 0;
-		this.productType = 'x';
 	}
 	
 	Product(String productID, String productName, float productPrice, char productType){
@@ -44,5 +40,20 @@ public class Product implements ShowDetails {
 			System.out.print("*");
 		}
 	}
-
+	
+	public void updateProductID(String productID){
+		this.productID = productID;
+	}
+	
+	public void updateProductName(String productName) {
+		this.productName = productName;
+	}
+	
+	public void updatePrice(float price) {
+		this.productPrice = price;
+	}
+	
+	public void updateType(char productType) {
+		this.productType = productType;
+	}
 }
