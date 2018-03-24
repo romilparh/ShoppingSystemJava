@@ -7,20 +7,22 @@ package romilparh;
  * @author shadybond
  *
  */
-public class Administrator extends User implements ShowDetails {
+public class Administrator extends User implements IShowDetails {
+	// Variable definition
 	private int verificationGrid;
 	
+	// Constructor definition
 	Administrator(int verificationGrid, int userID){
 		this.verificationGrid = verificationGrid;
 		this.userID = userID;
 	}
 	
 	Administrator(){
-		this.verificationGrid = 0;
-		this.userID = 0;
 	}
+	
 	/* (non-Javadoc)
 	 * @see romilparh.ShowDetails#showDetails()
+	 * Interface Method
 	 */
 	@Override
 	public void showDetails() {
@@ -35,6 +37,7 @@ public class Administrator extends User implements ShowDetails {
 		}
 	}
 	
+	// Administrator Class confined method
 	public void updateVerificationGrid(int verificationGrid) {
 		this.verificationGrid = verificationGrid;
 	}

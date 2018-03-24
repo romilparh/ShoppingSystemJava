@@ -1,25 +1,20 @@
 package romilparh;
 
 public class User {
+	// Variables
 	int userID;
 	String name;
 	int phoneNumber;
 	
+	// Private variables
 	private String password;
 	private String address;
 	private String eMail;
 	
+	// Constructors
 	User(){
-		this.userID = 0;
-		this.name = "";
-		this.phoneNumber = 0;
-		this.password = "";
-		this.address = "";
-		this.eMail = "";
-		
 	}
 	
-	// Implement eMail validation through function
 	User(int userID, String name, int phoneNumber, String password, String address, String eMail){
 		this.userID = userID;
 		this.name = name;
@@ -29,6 +24,7 @@ public class User {
 		this.eMail = eMail;
 	}
 	
+	// Class Confined Functions
 	public void changePassword(String password) {
 		this.password = password;
 	}

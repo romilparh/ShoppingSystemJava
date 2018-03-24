@@ -7,7 +7,7 @@ package romilparh;
  * @author shadybond
  *
  */
-public class Product implements ShowDetails {
+public class Product implements IShowDetails {
 	String productID;
 	String productName;
 	float productPrice;

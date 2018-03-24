@@ -9,18 +9,15 @@ import java.util.Date;
  * @author shadybond 
  *
  */
-public class Customer extends User implements ShowDetails{
+public class Customer extends User implements IShowDetails{
+	// Variable Definition
 	private int cardNumber;
 	private Date cardExpiry;
 	private int cardCVV;
 	private char cardType;
 	
+	// Constructor Definition
 	Customer(){
-		this.cardNumber = 0;
-		this.cardExpiry = null;
-		this.cardCVV = 0;
-		this.cardType = 'x';
-		this.userID = 0;
 	}
 	
 	Customer(int cardNumber, Date cardExpiry, int cardCVV, char cardType, int userID){
@@ -31,6 +28,7 @@ public class Customer extends User implements ShowDetails{
 		this.userID = userID;
 	}
 
+	// showDetails Method of IShowDetails Interface
 	@Override
 	public void showDetails() {
 		// Print *
@@ -44,6 +42,7 @@ public class Customer extends User implements ShowDetails{
 		}
 	}
 	
+	// Class Confined Methods
 	public void updateCardNumber(int cardNumber) {
 		this.cardNumber = cardNumber;
 	}

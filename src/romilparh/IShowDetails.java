@@ -1,5 +1,5 @@
 package romilparh;
 
-public interface ShowDetails {
+public interface IShowDetails {
 	public void showDetails();
 }
