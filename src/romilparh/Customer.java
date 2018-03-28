@@ -99,7 +99,7 @@ public class Customer extends User implements IShowDetails{
 		this.cardExpiry = cardExpiry;
 	}
 	
-	public void updatecardType(char cardType) {
+	public void updateCardType(char cardType) {
 		try {
 			if(isValidCardType(cardType)) {
 				this.cardType = cardType;

@@ -27,8 +27,8 @@ public class MediatorClass {
 		Product productFour = new Product("4", "Olay Conditioner", (float) 5.44,'C');
 		
 		// User Objects Definition
-		User userOne = new User("1", "Pikachu", 9878556743L, "Romil123", "Brampton", "romilparhwal007@gmail.com");
-		User userTwo = new User("2", "Panda", 9878987833L, "Gurpreet987", "Vancouver", "gurpreet@gmail.com");
+		User userOne = new User("1", "Pikachu", 9878556743L, "Panda123", "Brampton", "romilparhwal007@gmail.com");
+		User userTwo = new User("2", "Panda", 9878987833L, "HelloHello987", "Vancouver", "gurpreet@gmail.com");
 		User userThree = new User("3", "Gagandeep", 7657889932L,"Gagandeep","Toronto","gagandeepbrar0808@gmail.com");
 		
 		// Customer Objects Definition
