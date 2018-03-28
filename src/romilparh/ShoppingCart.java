@@ -16,9 +16,16 @@ public class ShoppingCart extends Customer implements IShowDetails {
 		
 	}
 	
-	ShoppingCart(int userID, String cartID){
-		this.userID = userID;
-		this.cartID = cartID;
+	ShoppingCart(String userID, String cartID){
+		try {
+			if(isValidUserID(userID) && isValidShoppingCartID(cartID)) {
+				this.userID = userID;
+				this.cartID = cartID;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	// showDetails Method from IShowDetails Interface
@@ -28,12 +35,13 @@ public class ShoppingCart extends Customer implements IShowDetails {
 		for(int i=0;i<50;i++) {
 			System.out.print("*");
 		}
+		System.out.println("\n");
 		System.out.println("Cart ID:"+this.cartID);
-		System.out.println("Product \t Product Quantity \t Product Quantity");
+		System.out.println("Product \t - Product Quantity \t - Product Subtotal");
 		for(int i = 0; i<this.productList.size();i++) {
-			System.out.print(this.productList.get(i)+"\t");
-			System.out.print(this.productQuantity.get(i)+"\t");
-			System.out.print("$"+this.subTotal.get(i)+"\t");
+			System.out.print(this.productList.get(i).productName+"\t");
+			System.out.print(this.productQuantity.get(i)+" \t");
+			System.out.print("$"+this.subTotal.get(i)+" \t");
 			System.out.print("\n");
 		}
 		calculateTotal();
@@ -44,7 +52,18 @@ public class ShoppingCart extends Customer implements IShowDetails {
 		}
 	}
 	
-	// Class Confined Methods
+	// Validation Methods
+	
+	public boolean isValidShoppingCartID(String cartID) throws ShoppingCartIDException{
+		if(cartID == "") {
+			ShoppingCartIDException e = new ShoppingCartIDException();
+			throw e;
+		} else {
+			return true;
+		}
+	}
+	
+	// Value Updation Methods
 	public void addItem(Product product, int quantity) {
 		this.productList.add(product);
 		this.productQuantity.add(quantity);
