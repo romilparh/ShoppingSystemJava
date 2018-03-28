@@ -52,7 +52,7 @@ public class Administrator extends User implements IShowDetails {
 	// Validations
 	
 	public boolean isValidGrid(int verificationGrid) throws AdministratorVerificationGridException{
-		if(userID == "") {
+		if(verificationGrid<1000 || verificationGrid>9999) {
 			AdministratorVerificationGridException e = new AdministratorVerificationGridException();
 			throw e;
 		} else {
