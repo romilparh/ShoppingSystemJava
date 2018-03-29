@@ -37,10 +37,11 @@ public class ShoppingCart extends Customer implements IShowDetails {
 		}
 		System.out.println("\n");
 		System.out.println("Cart ID:"+this.cartID);
-		System.out.println("Product \t - Product Quantity \t - Product Subtotal");
+		System.out.println("Product \t - Product Quantity \t - Product Price \t - Product Subtotal");
 		for(int i = 0; i<this.productList.size();i++) {
 			System.out.print(this.productList.get(i).productName+"\t");
 			System.out.print(this.productQuantity.get(i)+" \t");
+			System.out.print("$"+this.productList.get(i).productPrice+"\t");
 			System.out.print("$"+this.subTotal.get(i)+" \t");
 			System.out.print("\n");
 		}

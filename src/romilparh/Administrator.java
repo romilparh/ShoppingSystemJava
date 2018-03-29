@@ -18,6 +18,7 @@ public class Administrator extends User implements IShowDetails {
 			if(isValidUserID(userID) && isValidGrid(verificationGrid)) {
 				this.verificationGrid = verificationGrid;
 				this.userID = userID;
+				System.out.println("Administrator Object Created Successfully");
 			}
 		} catch (UserIDException e) {
 			// TODO Auto-generated catch block
