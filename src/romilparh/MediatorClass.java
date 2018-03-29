@@ -36,7 +36,7 @@ public class MediatorClass {
 		Customer customerTwo = new Customer(2345434231232342L, dateTwo, 123, 'C', "3");
 		
 		// Administrator Objects Definition
-		Administrator administratorOne = new Administrator(54873920, "1");
+		Administrator administratorOne = new Administrator(1995, "1");
 		
 		// Shopping Cart Object Definition
 		ShoppingCart shoppingCartOne = new ShoppingCart("2", "1");
